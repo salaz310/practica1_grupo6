@@ -13,4 +13,12 @@ public class PotenciaCuadrado {
     public int getPotenciaCuadrado(int num){
         return num * num;
     }
+    
+    public float raiz2(float radicando){
+        if(radicando<0){
+            return 0;
+        }
+        float res= (float) Math.sqrt(radicando);
+        return res;
+    }
 }

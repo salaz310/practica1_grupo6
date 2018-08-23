@@ -171,6 +171,11 @@ public class calculadora extends javax.swing.JFrame {
         jPanel3.add(jButton20);
 
         jButton21.setText("√");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton21);
 
         jButton22.setText("=");
@@ -276,6 +281,13 @@ public class calculadora extends javax.swing.JFrame {
         // TODO add your handling code here:
         jTextField1.setText(potencia.getPotenciaCuadrado(Integer.parseInt(jTextField1.getText()))+"");
     }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        // TODO add your handling code here:
+        float res= Integer.parseInt(jTextField1.getText());
+        res=  potencia.raiz2(res);
+        jTextField1.setText(Float.toString(res));
+    }//GEN-LAST:event_jButton21ActionPerformed
 
     /**
      * @param args the command line arguments
