@@ -17,11 +17,12 @@ public class calculadora extends javax.swing.JFrame {
     public Factorial factorial = new Factorial();
     public PotenciaCuadrado potencia = new PotenciaCuadrado();
     public Cubo potenciaCubo= new Cubo();
+    MultiplicacionDivision md;
     
     public calculadora() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -78,9 +79,19 @@ public class calculadora extends javax.swing.JFrame {
         jPanel3.add(jButton7);
 
         jButton8.setText("*");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton8);
 
         jButton9.setText("/");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton9);
 
         jButton10.setText("7");
@@ -180,6 +191,11 @@ public class calculadora extends javax.swing.JFrame {
         jPanel3.add(jButton21);
 
         jButton22.setText("=");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton22);
 
         jButton23.setText("0");
@@ -299,6 +315,24 @@ public class calculadora extends javax.swing.JFrame {
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
  jTextField1.setText(Double.toString(potenciaCubo.RaizCubo(Double.parseDouble(jTextField1.getText()))));       
     }//GEN-LAST:event_jButton25ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+         md = new MultiplicacionDivision();
+        md.operar1(Double.parseDouble(jTextField1.getText()), "*");
+        jTextField1.setText("");
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        double result;
+        result = md.operar2(Double.parseDouble(jTextField1.getText()));
+        jTextField1.setText(Double.toString(result));
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        md = new MultiplicacionDivision();
+        md.operar1(Double.parseDouble(jTextField1.getText()), "/");
+        jTextField1.setText("");
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
      * @param args the command line arguments
