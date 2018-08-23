@@ -5,6 +5,8 @@
  */
 package ayd1.p1_g6;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Mitchel Andrea
@@ -28,7 +30,11 @@ public class MultiplicacionDivision {
             resultado= primero * segundo;
         }
         if(this.signo.equals("/")){
-            resultado= primero / segundo;
+            if (segundo==0){
+                JOptionPane.showMessageDialog(null, "ERROR: no es posible dividir en 0.", "Grupo6", 2);
+            }else{
+                resultado= primero / segundo;
+            }
         }
        return resultado;
     }
