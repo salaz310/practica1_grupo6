@@ -14,6 +14,7 @@ public class calculadora extends javax.swing.JFrame {
     /**
      * Creates new form calculadora
      */
+    public Factorial factorial = new Factorial();
     public calculadora() {
         initComponents();
     }
@@ -211,6 +212,7 @@ public class calculadora extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        jTextField1.setText(factorial.funcion_factorial(Integer.parseInt(jTextField1.getText()))+"");
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
