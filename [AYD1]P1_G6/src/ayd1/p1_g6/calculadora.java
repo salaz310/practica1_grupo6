@@ -15,6 +15,8 @@ public class calculadora extends javax.swing.JFrame {
      * Creates new form calculadora
      */
     public Factorial factorial = new Factorial();
+    public PotenciaCuadrado potencia = new PotenciaCuadrado();
+    
     public calculadora() {
         initComponents();
     }
@@ -105,6 +107,11 @@ public class calculadora extends javax.swing.JFrame {
         jPanel3.add(jButton12);
 
         jButton14.setText("^2");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton14);
 
         jButton13.setText("4");
@@ -184,7 +191,7 @@ public class calculadora extends javax.swing.JFrame {
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 280, 210));
 
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 280, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -264,6 +271,11 @@ public class calculadora extends javax.swing.JFrame {
         // TODO add your handling code here:
         jTextField1.setText("");
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        jTextField1.setText(potencia.getPotenciaCuadrado(Integer.parseInt(jTextField1.getText()))+"");
+    }//GEN-LAST:event_jButton14ActionPerformed
 
     /**
      * @param args the command line arguments
