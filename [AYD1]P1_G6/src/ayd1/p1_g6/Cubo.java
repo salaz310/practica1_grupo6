@@ -15,4 +15,8 @@ public class Cubo {
         return Math.pow(numero,3);
     }
     
+    public double RaizCubo(double numero){
+    double resultado= Math.pow(numero, 1.0/3.0);
+    return resultado;
+    }
 }

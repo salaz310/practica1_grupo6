@@ -192,6 +192,11 @@ public class calculadora extends javax.swing.JFrame {
         jPanel3.add(jButton24);
 
         jButton25.setText("³√");
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton25);
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 280, 210));
@@ -290,6 +295,10 @@ public class calculadora extends javax.swing.JFrame {
         res=  potencia.raiz2(res);
         jTextField1.setText(Float.toString(res));
     }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+ jTextField1.setText(Double.toString(potenciaCubo.RaizCubo(Double.parseDouble(jTextField1.getText()))));       
+    }//GEN-LAST:event_jButton25ActionPerformed
 
     /**
      * @param args the command line arguments
