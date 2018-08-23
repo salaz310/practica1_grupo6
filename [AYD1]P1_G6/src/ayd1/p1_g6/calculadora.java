@@ -16,6 +16,7 @@ public class calculadora extends javax.swing.JFrame {
      */
     public Factorial factorial = new Factorial();
     public PotenciaCuadrado potencia = new PotenciaCuadrado();
+    public Cubo potenciaCubo= new Cubo();
     
     public calculadora() {
         initComponents();
@@ -220,6 +221,7 @@ public class calculadora extends javax.swing.JFrame {
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
+         jTextField1.setText(Double.toString(potenciaCubo.PotenciaCubo(Double.parseDouble(jTextField1.getText()))));
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
